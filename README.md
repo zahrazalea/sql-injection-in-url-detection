@@ -1,6 +1,6 @@
 # 🔐 SQL Injection Detection in URLs using Machine Learning
 
-A lightweight machine learning system to detect **SQL injection attacks** from URL inputs using NLP-based feature engineering and classification models. This project demonstrates an end-to-end pipeline from data preprocessing to model deployment.
+A lightweight machine learning system to detect **SQL injection attacks** from URL inputs using NLP-based feature engineering and classification models. This project demonstrates an end-to-end pipeline from data preprocessing to model inference.
 
 ---
 
@@ -11,7 +11,7 @@ SQL injection is one of the most common web security vulnerabilities. This proje
 - Classify URLs as **malicious (SQL injection)** or **benign**
 - Apply **NLP techniques** to transform URL strings into machine-readable features
 - Evaluate multiple machine learning models for optimal performance
-- Deploy a simple interface for **real-time prediction**
+- Provide a simple **runtime interface for testing predictions**
 
 ---
 
@@ -19,14 +19,14 @@ SQL injection is one of the most common web security vulnerabilities. This proje
 
 ### 1. Data Preprocessing
 - Cleaned and standardized URL inputs
-- Removed noise and irrelevant characters
-- Applied regex-based parsing for pattern extraction
+- Removed noise and handled special characters
+- Applied regex-based pattern handling
 
 ### 2. Feature Engineering
-- Converted text into numerical features using:
+- Transformed text into numerical representations using:
   - **TF-IDF Vectorizer**
   - **CountVectorizer**
-- Generated **n-gram representations** to capture injection patterns
+- Generated **n-gram features** to capture SQL injection patterns
 
 ### 3. Model Development
 - Trained and compared:
@@ -37,9 +37,10 @@ SQL injection is one of the most common web security vulnerabilities. This proje
   - Precision
   - Recall
 
-### 4. Deployment
-- Built a simple web interface using **Gradio**
-- Enabled users to input URLs and receive real-time predictions
+### 4. Inference Interface (Runtime)
+- Implemented a **Gradio-based interface** for local, runtime testing  
+- Allows users to input URLs and receive real-time predictions during execution  
+- Not deployed as a persistent web service (runs within notebook/session)
 
 ---
 
@@ -48,7 +49,7 @@ SQL injection is one of the most common web security vulnerabilities. This proje
 - **Languages:** Python  
 - **Libraries:** Pandas, Scikit-learn, NumPy, Regex, Joblib  
 - **Visualization:** Matplotlib, Wordcloud  
-- **Deployment:** Gradio  
+- **Interface (Runtime):** Gradio  
 - **Tools:** Jupyter Notebook / VS Code  
 
 ---
@@ -56,14 +57,5 @@ SQL injection is one of the most common web security vulnerabilities. This proje
 ## 📊 Results
 
 - Successfully classified SQL injection patterns from URL inputs  
-- Logistic Regression and Naive Bayes performed effectively for text-based classification  
-- Demonstrated ability to generalize detection on unseen inputs  
-
----
-
-## 🚀 How to Run
-
-1. Clone the repository:
-```bash
-git clone https://github.com/zahrazalea/sql-injection-in-url-detection.git
-cd sql-injection-in-url-detection
+- Demonstrated effectiveness of **TF-IDF + classical ML models** for text-based security tasks  
+- Logistic Regression and Naive Bayes showed strong performance on structured text data  

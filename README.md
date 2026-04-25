@@ -56,6 +56,6 @@ SQL injection is one of the most common web security vulnerabilities. This proje
 
 ## 📊 Results
 
-- Successfully classified SQL injection patterns from URL inputs  
+- Accuracy: 0.9975 (LR outperformed Naive Bayes)     
 - Demonstrated effectiveness of **TF-IDF + classical ML models** for text-based security tasks  
 - Logistic Regression and Naive Bayes showed strong performance on structured text data  

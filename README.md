@@ -56,6 +56,5 @@ SQL injection is one of the most common web security vulnerabilities. This proje
 
 ## 📊 Results
 
-- Accuracy: 0.9975 (LR outperformed Naive Bayes)     
-- Demonstrated effectiveness of **TF-IDF + classical ML models** for text-based security tasks  
-- Logistic Regression and Naive Bayes showed strong performance on structured text data  
+- Highest accuracy (0.9975) was obtained when using TF-IDF + LR
+- Logistic Regression and Naive Bayes both showed strong performance (0.9+) but the combination of TF-IDF and LR showed the best performance.   
